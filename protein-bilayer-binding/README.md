@@ -31,10 +31,18 @@ h. gmx mdrun -deffnm md -v
 ```
 then get the equilibrated KR8 peptide, [kr8_md.gro](./examples/kr8_md.gro)   
 
-**4. prepare the dry bilayer using Charmm-GUI.**   
+**4. prepare the dry bilayer**   
+a. build bilayer using Charmm-GUI   
 build the bilayer, choose the forcefield as Charmm36    
 dowload the tgz file and use the files in gromacs. convert [bilayer.gro](./examples/bilayer.gro) to [bilayer.pdb](./examples/bilayer.pdb), and also update the lipid in topol.top   
-Also, you can get the itp files for lipids ([POPC.itp](./examples/POPC.itp), [POPG.itp](./examples/POPG.itp)), copy them to your folder   
+   
+b. prepare the itp files of POPC and POPG   
+from bilayer.gro, we can get the pdb files of monomer POPC and POPG, which will be used to create their itp files.   
+```
+a. gmx pdb2gmx -f popc.pdb -o popc.gro -water tip3p -p popc.top   
+b. gmx pdb2gmx -f popg.pdb -o popg.gro -water tip3p -p popg.top
+```
+Similar to KR8, modify the popc.top and popg.top files, and save as itp files ([popc.itp](./examples/popc.itp), [popg.itp](./examples/popg.itp)), rename the posre.itp as [posre_popc.itp](./examples/posre_popc.itp) or [posre_popg.itp](./examples/posre_popg.itp).   
 
 **5. pack the bilayer with 10 KR8 peptides**   
 ```
@@ -54,7 +62,7 @@ structure kr8_md.pdb
   inside box 0. 0. 0. 115. 115. 120.
 end structure
 ```
-where bilayer was placed at the bottom of the box, and KR8 were distribution within the water.   
+in obtained [conf.pdb](./examples/conf.pdb) where bilayer was placed at the bottom of the box, and KR8 were distribution within the water.   
 
 **6. solvate the dry bilayer and peptide**   
 ```
@@ -76,8 +84,15 @@ b. gmx genion -s ions.tpr -o conf_w_ions.gro -p topol.top -pname NA -nname CL -n
 
 **8. run simulation**   
 ```
+# minimization
 a. gmx grompp -f em.mdp -c conf_w_ions.gro -p topol.top -o em
 b. gmx mdrun -deffnm em -v
-c. gmx grompp -f md.mdp -c em.gro -p topol.top -o md
-d. gmx mdrun -deffnm md -v
+
+# restrained equilibrition
+c. gmx grompp -f eq.mdp -c em.gro -p topol.top -o eq -r em.gro
+d. gmx mdrun -deffnm eq -v
+
+# production
+e. gmx grompp -f md.mdp -c eq.gro -p topol.top -o md
+f. gmx mdrun -deffnm md -v
 ```

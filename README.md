@@ -1,2 +1,2 @@
 # tutorial
-a collection of different tutorials
+A collection of various tutorials
