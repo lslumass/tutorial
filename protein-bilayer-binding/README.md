@@ -62,7 +62,7 @@ structure kr8_md.pdb
   inside box 0. 0. 0. 115. 115. 120.
 end structure
 ```
-in obtained [conf.pdb](./examples/conf.pdb) where bilayer was placed at the bottom of the box, and KR8 were distribution within the water.   
+in obtained [conf.pdb](./examples/conf.pdb), bilayer was placed at the bottom of the box, and KR8 were distribution within the water.   
 
 **6. solvate the dry bilayer and peptide**   
 ```
