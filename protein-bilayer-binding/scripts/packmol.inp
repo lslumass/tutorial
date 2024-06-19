@@ -1,0 +1,16 @@
+tolerance 10.0
+filetype pdb
+output conf.pdb
+add_box_sides 0.0
+
+structure bilayer.pdb
+  number 1
+  center
+  fixed 57.5 57.5 40. 0.0 0.0 0.0
+end structure
+
+structure kr8_md.pdb
+  number 10
+  inside box 0. 0. 0. 115. 115. 120.
+end structure
+

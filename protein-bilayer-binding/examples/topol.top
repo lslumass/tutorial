@@ -1,0 +1,20 @@
+; Include forcefield parameters
+#include "./charmm36-jul2022.ff/forcefield.itp"
+#include "POPC.itp"
+#include "POPG.itp"
+#include "kr8.itp"
+#include "./charmm36-jul2022.ff/tip3p.itp"
+#include "./charmm36-jul2022.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+POPC  	         280
+POPG  	         120
+KR8		 10
+SOL         32744
+NA               73
+CL               33
