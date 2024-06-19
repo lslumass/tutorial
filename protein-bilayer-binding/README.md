@@ -74,7 +74,7 @@ a. gmx grompp -f em.mdp -c conf_w_fix.gro -p topol.top -o ions.tpr -maxwarn 1
 b. gmx genion -s ions.tpr -o conf_w_ions.gro -p topol.top -pname NA -nname CL -neutral -conc 0.035
 ```
 
-**7. run simulation**   
+**8. run simulation**   
 ```
 a. gmx grompp -f em.mdp -c conf_w_ions.gro -p topol.top -o em
 b. gmx mdrun -deffnm em -v
