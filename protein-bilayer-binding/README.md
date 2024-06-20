@@ -36,7 +36,7 @@ a. build bilayer using Charmm-GUI
 Charmm-GUI --> Input Generator --> Membrane Builder --> Bilayer Builder   
 build the bilayer, choose the forcefield as Charmm36    
 you must go to the last step and dowload the tgz file and use the [bilayer.pdb](./examples/bilayer.pdb) in gromacs folder (usually it's called step5_input.pdb), and also update the number of lipid in topol.top   
->before the last step, the order of lipid in the pdb file is chaos, only the file in tgz is correct   
+>before the last step, the order of lipid in the pdb file is chaos, only the file in the final tgz is correct and minimized   
 also, please check the pdb file to make sure only lipid molecules are included   
    
 b. prepare the itp files of POPC and POPG   
@@ -66,6 +66,7 @@ structure kr8_md.pdb
 end structure
 ```
 in obtained [conf.pdb](./examples/conf.pdb), bilayer was placed at the bottom of the box, and KR8 were distribution within the water.   
+**Note:** change the position of bilayer and the box size according to your won system.   
 
 **6. solvate the dry bilayer and peptide**   
 ```
@@ -99,3 +100,4 @@ d. gmx mdrun -deffnm eq -v
 e. gmx grompp -f md.mdp -c eq.gro -p topol.top -o md
 f. gmx mdrun -deffnm md -v
 ```
+**Note:** you should check your own system to see if additional nvt/npt equlibrition is needed.   
