@@ -1,4 +1,5 @@
-This turotial is for the multiple-protein_-_bilayer binding system, where multiple copies of proteins were firstly distributed in water, far away from bilayer.
+This turotial is for the multiple-protein_bilayer binding system, where multiple copies of proteins were firstly distributed in water, far away from bilayer.   
+<img src="./image1.png" width="300" height="300"/>
 
 ## Dependencies:   
 1. [CHARMM-GUI](https://www.charmm-gui.org/)   
