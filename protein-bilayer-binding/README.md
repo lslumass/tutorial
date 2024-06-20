@@ -33,8 +33,9 @@ then get the equilibrated KR8 peptide, [kr8_md.gro](./examples/kr8_md.gro)
 
 **4. prepare the dry bilayer**   
 a. build bilayer using Charmm-GUI   
+Charmm-GUI --> Input Generator --> Membrane Builder --> Bilayer Builder   
 build the bilayer, choose the forcefield as Charmm36    
-dowload the tgz file and use the files in gromacs. convert [bilayer.gro](./examples/bilayer.gro) to [bilayer.pdb](./examples/bilayer.pdb), and also update the lipid in topol.top   
+dowload the [bilayer.pdb](./examples/bilayer.pdb), and also update the information about lipid in topol.top   
    
 b. prepare the itp files of POPC and POPG   
 from bilayer.gro, we can get the pdb files of monomer POPC and POPG, which will be used to create their itp files.   
