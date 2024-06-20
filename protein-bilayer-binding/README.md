@@ -35,7 +35,9 @@ then get the equilibrated KR8 peptide, [kr8_md.gro](./examples/kr8_md.gro)
 a. build bilayer using Charmm-GUI   
 Charmm-GUI --> Input Generator --> Membrane Builder --> Bilayer Builder   
 build the bilayer, choose the forcefield as Charmm36    
-dowload the [bilayer.pdb](./examples/bilayer.pdb), and also update the information about lipid in topol.top   
+you must go to the last step and dowload the tgz file and use the [bilayer.pdb](./examples/bilayer.pdb) in gromacs folder (usually it's called step5_input.pdb), and also update the number of lipid in topol.top   
+>before the last step, the order of lipid in the pdb file is chaos, only the file in tgz is correct   
+also, please check the pdb file to make sure only lipid molecules are included   
    
 b. prepare the itp files of POPC and POPG   
 from bilayer.gro, we can get the pdb files of monomer POPC and POPG, which will be used to create their itp files.   
