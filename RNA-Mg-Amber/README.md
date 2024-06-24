@@ -1,5 +1,6 @@
 # RNA-Mg-Amber
 This tutorial is for the simple simulation of RNA in solution with Mg2+   
+<img src="./image1.png" width="300" height="300"/>
 
 ## Dependencies
 1. [pdb4amber](https://ambermd.org/tutorials/basic/tutorial9/index.php)   
