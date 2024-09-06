@@ -2,6 +2,7 @@
 A collection of various tutorials for MD simulation   
 1. [Protein-Bilayer-Binding](#1-protein-bilayer-binding)   
 2. [RNA-Mg-Amber in Solution](#2-rna-mg-amber-in-solution)   
+3. [Martini-IDP with scaling](#3-martini-idp-with-scaling)   
 
 ## 1. [Protein-Bilayer-Binding](./protein-bilayer-binding/README.md)   
 **component:** peptide, bilayer, water, ions    
@@ -12,3 +13,9 @@ A collection of various tutorials for MD simulation
 **component:** RNA, NaCl, MgCl2, water   
 **system:** RNA solution with NaCl and MgCl2   
 <img src="./RNA-Mg-Amber/image1.png" width="300" height="300"/> <img src="./RNA-Mg-Amber/image2.png" width="300" height="300"/>   
+
+## 3. [Martini-IDP with scaling](./Martini_IDP/README.md)   
+**component:** IDP   
+**system:** IDP within scaling of original Martini force field   
+<img src="./Martini_IDP/image1.png" height="300"/> <img src="./Martini_IDP/image2.png" height="300"/>   
+
