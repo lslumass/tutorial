@@ -1,0 +1,3 @@
+[submodule "Martini_IDP"]
+	path = Martini_IDP
+	url = https://github.com/lslumass/Martini_IDP
