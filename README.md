@@ -19,3 +19,4 @@ A collection of various tutorials for MD simulation
 **system:** IDP within scaling of original Martini force field   
 <img src="./Martini_IDP/image1.png" height="300"/> <img src="./Martini_IDP/image2.png" height="300"/>   
 
+## 4. [Martini-IDP phase separation]
