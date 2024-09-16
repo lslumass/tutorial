@@ -48,17 +48,18 @@ def aggr_cal(frame_index, segs, grps):
 
 
 #some parameters which should be changed for different sys.
-r_criterion = 15.0
-nmol = 200
-freq = 100
-time_step = 0.04        # 5000*0.008=0.04 ns
+r_criterion = 15.0          # r_cut for the determination of cluser
+nmol = 200                  # peptide number
+freq = 100                  # frequency for the calculation, 100 means every 100 frames
+time_step = 0.04            # time step in the simulation, 5000*0.008=0.04 ns
 
 u = mda.Universe('conf.psf', 'system.dcd')
 box = u.dimensions
 segs = []
 grps = []
-for i in range(200):
-    seg = u.select_atoms('segid R'+str(i)+' and name P')
+# assignment of group id for each chain/segment
+for i in range(nmol):
+    seg = u.select_atoms('segid R'+str(i)+' and name P')        # modify the selection accordingly
     segs.append(seg)
     grps.append(i)
 grps = np.array(grps)
@@ -66,10 +67,10 @@ grps = np.array(grps)
 # multiprocess to calculate aggr_number for each frame
 cal_per_frame = partial(aggr_cal, segs=segs, grps=grps)
 frame_values = np.concatenate((np.array([0]), np.arange(freq-1, u.trajectory.n_frames, freq)))
-print(frame_values)
-#frame_values = np.array([-1])
+# number of threads used for multiprocess, the frames will be divided into n_jobs subsection
 n_jobs = 20
 
+# assing to Pool
 print("assign job to Pool")
 with Pool(n_jobs) as worker_pool:
     result = worker_pool.map(cal_per_frame, frame_values)
