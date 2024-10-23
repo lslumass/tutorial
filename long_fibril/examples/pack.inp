@@ -1,0 +1,13 @@
+tolerance 10.0
+filetype pdb
+output conf.pdb
+seed 1234567
+randominitialpoint 
+sidemax 500.d0
+add_box_sides 500.0
+
+structure 40mer_hyres.pdb
+  number 1 
+  center 
+  fixed 250. 250. 250. 0. 0. 0.
+end structure
