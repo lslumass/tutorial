@@ -22,8 +22,9 @@ A collection of various tutorials for MD simulation
 ## 4. [Martini-IDP phase separation](./Martini-idp-phase-separation/README.md)   
 **component:** IDP   
 **system:** IDP phase separation within scaling of Martini force field    
+<img src="./Martini-idp-phase-separation/image1.png" height="300"/>   
 
 ## 5. [alpha-Synu fibril](./long_fibril/README.md)   
 **component:** IDP   
-**system:** long fibril of alpha-synuclein simulation
+**system:** long fibril of alpha-synuclein simulation   
 <img src="./long_fibril/image1.png" height="300"/> <img src="./long_fibril/image2.png" height="300"/>   
