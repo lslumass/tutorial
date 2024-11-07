@@ -1,4 +1,4 @@
-# long_fibril   
+# long_fibril_2   
 This turotial is for the simulation of long alpha-synuclein fibril (the optimized verstion of [long_fibril](../long_fibril/)).   
 <img src="./image1.png" width="300" height="300"/><img src="./image2.png" width="300" height="300"/>
 
@@ -34,4 +34,4 @@ python psfgen_hyres.py -i monomer_hyres.pdb -n 80 -o conf.psf
 packmol < pack.inp
 python run.py -b 50
 ```
-For this part, follow the [HyRes tutorial](https://github.com/lslumass/HyRes_GPU/tree/dev).   
+For details, follow the [HyRes tutorial](https://github.com/lslumass/HyRes_GPU/tree/dev).   
