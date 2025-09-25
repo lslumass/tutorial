@@ -25,7 +25,7 @@ select the terminals, then modify the obtained [kr8.top](./examples/kr8.top), de
 a. gmx editconf -f kr8.gro -d 1.0 -bt cubic -o box.gro   
 b. gmx solvate -cp box.gro -cs spc216.gro -p topol.top -o boxw.gro    
 c. gmx grompp -f em.mdp -c boxw.gro -o ion.tpr -p topol.top   
-d. gmx genions -s ion.tpr -o boxwion.gro -pname NA -nname CL -conc 0.035 -neutral -p topolt.top   
+d. gmx genion -s ion.tpr -o boxwion.gro -pname NA -nname CL -conc 0.035 -neutral -p topol.top   
 e. gmx grompp -f em.mdp -c boxwion.gro -p topol.top -o em.gro   
 f. gmx mdrun -deffnm em -v   
 g. gmx grompp -f md.mdp -c em.grp -p topol.top -o md.mdp    
