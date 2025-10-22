@@ -39,6 +39,7 @@ For details, follow the [HyRes tutorial](https://github.com/lslumass/HyRes_GPU/t
 
 ## Back to all-atom
 After HyRes simulation finished, we might need backmap it to all atom structure to run atomistic simulation.   
+<img src="./image4.png" width="300" height="300"/><img src="./image5.png" width="300" height="300"/>
 1. Backmap   
 Save out the structure but backbone only [fibril_hyres_producted.pdb](./examples/fibril_hyres_producted.pdb). Then, use Charmm-GUI to rebuild the atomistic structure [fibril_all_atom.pdb](./examples/fibril_all_atom.pdb).   
 2. Replace the core region   
