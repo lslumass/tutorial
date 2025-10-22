@@ -35,3 +35,14 @@ packmol < pack.inp
 python run.py -b 50
 ```
 For details, follow the [HyRes tutorial](https://github.com/lslumass/HyRes_GPU/tree/dev).   
+
+
+## Back to all-atom
+After HyRes simulation finished, we might need backmap it to all atom structure to run atomistic simulation.   
+1. Backmap   
+Save out the structure but backbone only [fibril_hyres_producted.pdb](./examples/fibril_hyres_producted.pdb). Then, use Charmm-GUI to rebuild the atomistic structure [fibril_all_atom.pdb](./examples/fibril_all_atom.pdb).   
+2. Replace the core region   
+The fibril core region would be different with crystal structure, which might make the all-atom simulation unstable. So, we can replace the coordinates of fibril core with crystal structure, using [replace_coordinates.py](./scripts/replace_coordinates.py)   
+```python replace_coordinates.py 40mer_fill_charmm_pdb fibril_all_atom_replaced.pdb```
+3. run all-atom simulation   
+Use monomer pdb file to create itp file and run Gromacs simulation

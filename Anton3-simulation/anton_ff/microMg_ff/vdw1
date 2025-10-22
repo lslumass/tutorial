@@ -1,0 +1,5 @@
+[
+   { "type" : "Na+",  "params" : { "sigma" : 2.43928,  "epsilon" : 0.0365846  },  "memo" : "  " },
+   { "type" : "Cl-",  "params" : { "sigma" : 0.439443,  "epsilon" : 0.4155978 },  "memo" : "Chloride parameters from Smith-Dang (doi:10.1063/1.466363)" },
+   { "type" : "Mg2+",  "params" : { "sigma" : 0.103643,  "epsilon" : 290.584188 },  "memo" : "mMg - MG with water exchange as in experiment" }
+]

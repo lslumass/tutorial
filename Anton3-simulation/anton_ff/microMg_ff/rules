@@ -1,0 +1,27 @@
+{
+    "info" : [
+        "MicroMg with OPC water for RNA",
+        "Grotz et al., J. Chem. Phys. 156, 114501 (2022)"
+    ],
+    "vdw_func" : "lj12_6_sig_epsilon",
+    "vdw_comb_rule" : "arithmetic/geometric",
+    "exclusions" : 4,
+    "es_scale" : [
+        0.0,
+        0.0,
+        0.8333
+    ],
+    "lj_scale" : [
+        0.0,
+        0.0,
+        0.5
+    ],
+    "nbfix_identifier" : "MicroMg",
+    "plugins" : [
+        "exclusions",
+        "mass",
+        "vdw1",
+        "vdw2"
+    ]
+}
+
