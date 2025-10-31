@@ -103,3 +103,16 @@ e. gmx grompp -f md.mdp -c eq.gro -p topol.top -o md
 f. gmx mdrun -deffnm md -v
 ```
 **Note:** you should check your own system to see if additional nvt/npt equlibrition is needed.   
+
+
+# Alternative way
+1. prepare bilayer system using Charmm-GUI, and get the equilibrited bilayer. (bilayer_md.pdb)    
+2. pack 10 kr8 in a box with the same xy dimension, and use Charmm-GUI to solvate them to get the kr8_box.pdb and essential itp files.   
+3. shift the kr8_box.pdb to the top of the bilayer:   
+```convpdb.pl kr8_box.pdb -translate 0 0 z > kr8_top.pdb```
+4. merge bilayer_md.pdb and kr8_top.pdb to stack them:   
+```cat bilayer_md.pdb kr8_top.pdb > conf.pdb```   
+5. renumber the atom index:   
+```convpdb.pl conf.pdb -renumber 1 > conf_re.pdb```
+6. fix the box size and convert it to conf.gro   
+7. fix topol.top file for each entry to run simulation   
