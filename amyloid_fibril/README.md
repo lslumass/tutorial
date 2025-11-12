@@ -1,6 +1,6 @@
 # Amyloid Fibril   
 This turotial is for the simulation of long alpha-synuclein fibril (the optimized verstion of [long_fibril_2](../long_fibril_2/)), including building long fibril, runing HyRes simulation, and backmaping to all atom.   
-<img src="./image1.png" width="300" height="300"/><img src="./image2.png" width="300" height="300"/>
+<img src="./image1.png" height="300"/><img src="./image2.png" height="300"/>
 
 ## Dependencies:   
 1. [HyresBuilder](https://github.com/lslumass/HyresBuilder/tree/er60)   
