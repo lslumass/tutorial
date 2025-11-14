@@ -18,7 +18,8 @@ build a 40mer of alpha-synuclein fibril based on 6XYO.
 ```python build_long_fibril_v2.py -i 6xyo.pdb -n 40 -o 40mer.pdb```   
 the 40-layer fibirl will be built ([40mer.pdb](./examples/40mer.pdb)).   
 3. fill in the missing residues using Modeller, followd by performiong a very-fast level refinement   
-```python add_missing_residues_v3.py 6xyo.fasta 80```    
+```python add_missing_residues_v3.py 6xyo.fasta 80```   
+**Note:** use the first chainID as the chainID in the alignment.ali fiel   
 here, 80 is tatol number of monomers (40 layers, 80 monomers)   
 ignore any error message if you get the pdb file named 'fill.B*******1.pdb', it was renamed as [40mer_fill.pdb](./examples/40mer_fill.pdb) here.    
 4. add hydrogens and convert [40mer_fill.pdb](./examples/40mer_fill.pdb) to charmm-style [40mer_fill_charmm.pdb](./examples/40mer_fill_charmm.pdb) using cg2all.   
